@@ -5,11 +5,13 @@ import PureComponentExp from '../components/PureComponentExp';
 const routeConfig = [
 	{
 		path: '/pure-component',
-		component: 'PureComponentExp'
+		component: 'PureComponentExp',
+		name: 'Pure comonent'
 	},
 	{
 		path: '/',
-		component: 'Home'
+		component: 'Home',
+		name: 'Home page'
 	},
 ];
 

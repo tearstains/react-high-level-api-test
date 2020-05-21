@@ -13,9 +13,11 @@ const ListRoutes = () => {
 	const routes = useContext(RoutesContext).slice().reverse();
 	return <ul>
 		{
-			routes.map( (r, idx) => <List key={idx}>
-				<Link to={r.path}> {r.component}</Link>
-			</List>)
+			routes.map((r, idx) => (
+				<List key={idx}>
+					<Link to={r.path}> {r.name}</Link>
+				</List>
+			))
 		}
 	</ul>
 }
