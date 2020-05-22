@@ -5,7 +5,7 @@ class IsPureComponent extends PureComponent {
 		return (
 			<div>
 				<div>-----</div>
-				<div>PureComponent render: {this.props.value}</div>
+				<div>PureComponent render: {this.props.state}</div>
 				<div>Render be Called: {Math.random()}</div>
 			</div>
 		);
@@ -17,7 +17,7 @@ class NonComponent extends Component {
 		return (
 			<div>
 				<div>-----</div>
-				<div>Non PureComponent render: {this.props.value}</div>
+				<div>Non PureComponent render: {this.props.state}</div>
 				<div>Render be Called: {Math.random()}</div>
 			</div>
 		);
