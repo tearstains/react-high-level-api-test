@@ -1,7 +1,7 @@
 import React, { useState, memo } from 'react';
 
 
-function Demo(props) {
+let Demo = (props) => {
 	const {state, index} = props;
 	return <div>
 		<div>-----</div>
@@ -22,6 +22,7 @@ const Parent = () => {
 		<button onClick={() => setState(Math.random())}>click to change state and pass props to two components</button>
 		<div>Current passed props value = {state}</div>
 		<div>Current NOT passed props value = {value}</div>
+		{/* react memo: state 沒更動我根本就不需要往下render*/}
 		<MemoDemo state={state} index={1}/>
 		<Demo state={state} index={2}/>
 	</div>

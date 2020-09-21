@@ -9,6 +9,7 @@ import React, { useState, useMemo } from 'react';
 function MemoComp(props) {
 	const value = useMemo(()=>{
 		// some expensive computing
+		// 表示當state沒變時 我們不需要重新用state去算出複雜的value 節省時間
 		return Math.random() + Math.random() + props.state;
 	}, [props.state]);
 
@@ -29,7 +30,18 @@ function Parent() {
 		<div>Current passed props value = {state}</div>
 		<div>Current NOT passed props value = {value}</div>
 		<MemoComp state={state} index={1}/>
+		<Test state={state}/>
 	</div>
 }
+
+// memo class component
+// state還是會被memo起來 但這個是react team故意的 不過主流沒要你這樣用的意思
+// https://github.com/facebook/react/issues/13937
+const Test = React.memo(class extends React.Component {
+  render () {
+  	console.log('call render');
+    return <h1>TEST</h1>
+  }
+});
 
 export default Parent;
