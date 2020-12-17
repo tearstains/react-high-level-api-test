@@ -4,9 +4,20 @@ import PureComponentExp from '../components/PureComponentExp';
 import Memo from '../components/Memo';
 import UseMemoHooks from '../components/UseMemoHooks';
 import ContextTest from '../components/ContextTest'
-
+import CountComponent from '../components/CountComponent';
+import CallbackCompnent from '../components/CallbackCompnent';
 
 const routeConfig = [
+	{
+		path: '/use-callback',
+		component: 'CallbackCompnent',
+		name: 'use callback'
+	},
+	{
+		path: '/use-reducer',
+		component: 'CountComponent',
+		name: 'use reducer page'
+	},
 	{
 		path: '/context-text',
 		component: 'ContextTest',
@@ -22,7 +33,7 @@ const routeConfig = [
 		component: 'Memo',
 		name: 'React Memo'
 	},
-  {
+	{
 		path: '/useMmeo',
 		component: 'UseMemoHooks',
 		name: 'use Memo Hooks'
@@ -31,7 +42,7 @@ const routeConfig = [
 		path: '/',
 		component: 'Home',
 		name: 'Home page'
-	},
+	}
 ];
 
 export const routesMap = {
@@ -40,6 +51,8 @@ export const routesMap = {
 	Memo,
 	UseMemoHooks,
 	ContextTest,
+	CountComponent,
+	CallbackCompnent
 }
 
 export const RoutesContext = createContext(routeConfig);

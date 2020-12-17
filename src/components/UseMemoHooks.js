@@ -35,7 +35,7 @@ function Parent() {
 }
 
 // memo class component
-// state還是會被memo起來 但這個是react team故意的 不過主流沒要你這樣用的意思
+// state還是可以會被memo起來 但這個是react team故意的 不過主流沒要你這樣用的意思
 // https://github.com/facebook/react/issues/13937
 const Test = React.memo(class extends React.Component {
   render () {
