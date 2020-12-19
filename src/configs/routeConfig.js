@@ -6,8 +6,14 @@ import UseMemoHooks from '../components/UseMemoHooks';
 import ContextTest from '../components/ContextTest'
 import CountComponent from '../components/CountComponent';
 import CallbackCompnent from '../components/CallbackCompnent';
+import InputWithRef from '../components/InputWithRef'
 
 const routeConfig = [
+	{
+		path: '/create-ref',
+		component: 'InputWithRef',
+		name: 'create ref'
+	},
 	{
 		path: '/use-callback',
 		component: 'CallbackCompnent',
@@ -52,7 +58,8 @@ export const routesMap = {
 	UseMemoHooks,
 	ContextTest,
 	CountComponent,
-	CallbackCompnent
+	CallbackCompnent,
+	InputWithRef
 }
 
 export const RoutesContext = createContext(routeConfig);
