@@ -6,9 +6,15 @@ import UseMemoHooks from '../components/UseMemoHooks';
 import ContextTest from '../components/ContextTest'
 import CountComponent from '../components/CountComponent';
 import CallbackCompnent from '../components/CallbackCompnent';
-import InputWithRef from '../components/InputWithRef'
+import InputWithRef from '../components/InputWithRef';
+import ForwardRefComponent from '../components/ForwardRefComponent';
 
 const routeConfig = [
+	{
+		path: '/forward-ref',
+		component: 'ForwardRefComponent',
+		name: 'forward ref'
+	},
 	{
 		path: '/create-ref',
 		component: 'InputWithRef',
@@ -59,7 +65,8 @@ export const routesMap = {
 	ContextTest,
 	CountComponent,
 	CallbackCompnent,
-	InputWithRef
+	InputWithRef,
+	ForwardRefComponent
 }
 
 export const RoutesContext = createContext(routeConfig);
