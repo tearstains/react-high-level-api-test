@@ -8,8 +8,14 @@ import CountComponent from '../components/CountComponent';
 import CallbackCompnent from '../components/CallbackCompnent';
 import InputWithRef from '../components/InputWithRef';
 import ForwardRefComponent from '../components/ForwardRefComponent';
+import DataFetchingExample from '../components/DataFetchingExample'
 
 const routeConfig = [
+	{
+		path: '/data-fetching',
+		component: 'DataFetchingExample',
+		name: 'data fetching component'
+	},
 	{
 		path: '/forward-ref',
 		component: 'ForwardRefComponent',
@@ -66,7 +72,8 @@ export const routesMap = {
 	CountComponent,
 	CallbackCompnent,
 	InputWithRef,
-	ForwardRefComponent
+	ForwardRefComponent,
+	DataFetchingExample
 }
 
 export const RoutesContext = createContext(routeConfig);
