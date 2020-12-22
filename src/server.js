@@ -19,6 +19,8 @@ export function makeServer({ environment = "test" } = {}) {
       this.get("/users", (schema) => {
         return schema.users.all()
       })
+
+      this.get("/users-error", { errors: ['The site is down'] }, 500);
     },
   })
 
